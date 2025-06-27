@@ -2,13 +2,12 @@ package net.lucypoulton.pronouns.api.set;
 
 public class ParsedPronounSet extends PronounSet {
 
-    private final String subjective, objective, progressive, possessiveAdjective, possessivePronoun, reflexive;
+    private final String subjective, objective, possessiveAdjective, possessivePronoun, reflexive;
 
-    public ParsedPronounSet(String subjective, String objective, String progressive,
+    public ParsedPronounSet(String subjective, String objective,
                             String possessiveAdjective, String possessivePronoun, String reflexive) {
         this.subjective = subjective;
         this.objective = objective;
-        this.progressive = progressive;
         this.possessiveAdjective = possessiveAdjective;
         this.possessivePronoun = possessivePronoun;
         this.reflexive = reflexive;
@@ -24,10 +23,6 @@ public class ParsedPronounSet extends PronounSet {
         return objective;
     }
 
-    @Override
-    public String progressive() {
-        return progressive;
-    }
 
     @Override
     public String possessiveAdjective() {

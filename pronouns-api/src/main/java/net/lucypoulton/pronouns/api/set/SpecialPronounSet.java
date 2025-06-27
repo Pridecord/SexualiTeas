@@ -39,11 +39,6 @@ public class SpecialPronounSet extends PronounSet {
     }
 
     @Override
-    public String progressive() {
-        return parent.progressive();
-    }
-
-    @Override
     public String possessiveAdjective() {
         return parent.possessiveAdjective();
     }

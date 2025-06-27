@@ -21,7 +21,7 @@ dependencies {
     compileOnly("net.kyori:adventure-api:4.9.2")
     compileOnly("com.google.guava:guava:30.1.1-jre")
     compileOnly("org.jetbrains:annotations:22.0.0")
-    compileOnly("me.clip:placeholderapi:2.10.9")
+    compileOnly("me.clip:placeholderapi:2.11.5")
 }
 
 tasks {

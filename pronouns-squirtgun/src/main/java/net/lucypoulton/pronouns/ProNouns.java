@@ -104,7 +104,7 @@ public class ProNouns extends SquirtgunPlugin<ProNounsPlatform> {
             new PolymartUpdateChecker(this,
                 921,
                 getConfigHandler().getPrefix()
-                    .append(getConfigHandler().formatMain("A new version of ProNouns is available!\nFind it at "))
+                    .append(getConfigHandler().formatMain("A new version of ProNouns is available!\nUnfortunately, the original creator's website is down. Here's the link anyways: "))
                     .append(getConfigHandler().formatAccent("https://lucyy.me/pronouns",
                             new TextDecoration[]{TextDecoration.UNDERLINED})
                         .clickEvent(ClickEvent.openUrl("https://lucyy.me/pronouns"))),

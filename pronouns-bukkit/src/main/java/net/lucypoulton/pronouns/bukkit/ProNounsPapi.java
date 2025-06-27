@@ -93,9 +93,6 @@ public class ProNounsPapi extends PlaceholderExpansion {
             case "subjective":
                 feedback = mainPronouns.subjective();
                 break;
-            case "progressive":
-                feedback = mainPronouns.progressive();
-                break;
             case "possessiveadj":
                 feedback = mainPronouns.possessiveAdjective();
                 break;

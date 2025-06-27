@@ -12,8 +12,6 @@ public abstract class PronounSet {
 
     public abstract String objective();
 
-    public abstract String progressive();
-
     public abstract String possessiveAdjective();
 
     public abstract String possessivePronoun();
@@ -32,14 +30,13 @@ public abstract class PronounSet {
     public String toString() {
         return subjective() + "/" +
             objective() + "/" +
-            progressive() + "/" +
             possessiveAdjective() + "/" +
             possessivePronoun() + "/" +
             reflexive();
     }
 
     public String[] asArray() {
-        return new String[]{subjective(), objective(), progressive(), possessiveAdjective(), possessivePronoun(), reflexive()};
+        return new String[]{subjective(), objective(), possessiveAdjective(), possessivePronoun(), reflexive()};
     }
 
     @Override
@@ -54,10 +51,10 @@ public abstract class PronounSet {
 
     public static PronounSet parse(String input) {
         List<String> split = StringUtils.splitSet(input);
-        if (split.size() != 6) {
+        if (split.size() != 5) {
             throw new IllegalArgumentException("Invalid number of pronouns in set");
         }
-        return new ParsedPronounSet(split.get(0), split.get(1), split.get(2), split.get(3), split.get(4), split.get(5));
+        return new ParsedPronounSet(split.get(0), split.get(1), split.get(2), split.get(3), split.get(4));
     }
 
     public static String format(Collection<PronounSet> sets) {

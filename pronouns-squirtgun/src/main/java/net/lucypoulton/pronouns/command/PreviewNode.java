@@ -76,7 +76,7 @@ public class PreviewNode extends AbstractNode<PermissionHolder> {
 				capitalise(set.subjective()) + " asked me to help with " +
 				set.objective() + " build.\n" +
 				player.getUsername() + " has been spending all " + set.possessiveAdjective() +
-				" time on this server. I hope " + set.progressive() + " doing okay.";
+				" time on this server.";
 		return Component.text(builder);
 	}
 }

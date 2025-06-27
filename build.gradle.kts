@@ -27,10 +27,12 @@ subprojects {
     repositories {
         maven("https://papermc.io/repo/repository/maven-public/")
         maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+        maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
         mavenCentral()
     }
 
     dependencies {
         implementation("net.lucypoulton:squirtgun-api:2.0.0-pre9")
+        compileOnly ("me.clip:placeholderapi:2.11.6")
     }
 }

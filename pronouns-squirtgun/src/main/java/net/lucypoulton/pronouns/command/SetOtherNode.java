@@ -58,20 +58,22 @@ public class SetOtherNode extends AbstractNode<PermissionHolder> {
     public Component execute(CommandContext context) {
         final FormatProvider fmt = context.getFormat();
 
+        SquirtgunPlayer player = Objects.requireNonNull(context.getArgumentValue(playerArg));
         Set<PronounHandler.ParseResult> setList = context.getArgumentValue(setsArg);
 
-        Pair<Set<PronounSet>, Component> result = SetPronounsNode.parse(setList, fmt);
-        Set<PronounSet> newSets = result.key();
-        Component errorMessages = result.value();
-
-        if (!newSets.isEmpty()) {
-            SquirtgunPlayer player = Objects.requireNonNull(context.getArgumentValue(playerArg));
-            pl.getPronounHandler().setUserPronouns(player, newSets);
-            errorMessages = errorMessages.append(fmt.getPrefix()
-                .append(fmt.formatMain("Set " + player.getUsername() + "'s pronouns to "))
-                .append(fmt.formatAccent(PronounSet.format(newSets)))
-            );
+        Set<PronounSet> newSets = new HashSet<>();
+        for (PronounHandler.ParseResult result : setList) {
+            try {
+                newSets.addAll(result.results());
+            } catch (Exception e) {
+                return fmt.getPrefix().append(fmt.formatMain("Invalid pronoun set"));
+            }
         }
-        return errorMessages;
+
+        pl.getPronounHandler().setUserPronouns(player, newSets);
+
+        return fmt.getPrefix()
+                .append(fmt.formatMain("Set " + player.getUsername() + "'s pronouns to "))
+                .append(fmt.formatAccent(PronounSet.format(newSets)));
     }
 }
