@@ -1,0 +1,30 @@
+# Identities Config File
+# Make changes here and update them by either using /identities reload
+# or by restarting the server
+# NOTE: if you're using predefined sets with MySQL, make sure they match on
+# all servers!
+# Documentation at https://docs.lucypoulton.net/identities
+# Support discord at https://discord.lucypoulton.net
+checkForUpdates: 'true'
+accent: '{#fa9efa>}%s{#9dacfa<}'
+main: '&f'
+
+connection: yml
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  database: identities
+  username: identities
+  password: password
+
+predefinedSets: []
+
+filter:
+  enabled: 'true'
+  patterns:
+    - apache+
+    - hel+icop+ter
+
+cloud:
+  sync: true
+  upload: true

@@ -1,0 +1,4 @@
+name: Identities
+version: @version@
+main: net.lucypoulton.identities.bungee.IdentitiesBungee
+author: '__lucyy'

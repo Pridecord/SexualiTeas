@@ -1,0 +1,20 @@
+name: Identities
+version: @version@
+main: net.lucypoulton.identities.bukkit.IdentitiesBukkit
+api-version: 1.13
+authors: [ __lucyy ]
+description: 'Putting the "pro" in "identities".'
+website: https://lucyy.me
+softdepend:  [ PlaceholderAPI ]
+commands:
+  identities:
+    usage: 'Usage: /identities'
+    aliases: [ 'ide' ]
+
+permissions:
+  identities.bypass:
+    description: "Bypass the filter for setting identities"
+    default: op
+  identities.admin:
+    description: "Access to admin commands - run commands as other users"
+    default: op

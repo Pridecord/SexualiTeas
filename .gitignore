@@ -117,4 +117,4 @@ run/
 !src/**/build/
 !gradle-wrapper.jar
 
-pronouns.properties
+identities.properties
